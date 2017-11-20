@@ -1,0 +1,32 @@
+<div class="page-header">
+  <%= link_to new_address_path, class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-plus"></span>
+    New Address
+  <% end %>
+  <h1>Listing addresses</h1>
+</div>
+
+<div class="table-responsive">
+  <table class="table table-striped table-bordered table-hover">
+    <thead>
+      <tr>
+            <th>Address line 1</th>
+            <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @addresses.each do |address| %>
+        <%= content_tag :tr, id: dom_id(address), class: dom_class(address) do %>
+                      <td><%= address.address_line_1 %></td>
+                    <td><%= link_to 'Show', address %></td>
+          <td><%= link_to 'Edit', edit_address_path(address) %></td>
+          <td><%= link_to 'Destroy', address, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+
