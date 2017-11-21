@@ -34,6 +34,7 @@ gem 'jquery-rails'
 gem 'bootstrap-generators', '~> 3.3.4'
 gem 'devise'
 gem 'devise-bootstrap-views'
+gem 'bootstrap_form'
 gem "letter_opener", :group => :development
 
 # Use Capistrano for deployment
